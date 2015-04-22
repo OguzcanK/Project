@@ -1,0 +1,140 @@
+html {
+    padding: 0;
+    margin: 0;
+    background-color: #FFF;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 93%;
+    line-height: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+a,
+a:link,
+a:visited {
+    color: blue;
+}
+
+h1, h2, h3, h4, h5, h6 {margin-top: 0;}
+
+p {margin: 0 0 1em 0;}
+
+.app-header {
+    background-color: #305782;
+    padding: 30px 20px;
+    color: #FFF;
+}
+
+.app-header h1 {
+    margin: 0;
+}
+
+.nav-menu {
+    background-color: #e3e3e3;
+}
+
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    list-style: none;
+    border-bottom: 2px solid #d5dce4;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.nav-menu ul li a:link,
+.nav-menu ul li a:visited {
+    display: block;
+    background-color: #e7ecf2;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #305782;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #dbe1e8;
+}
+
+.side-scroll {
+    background-color: #e3e3e3;
+    font-size: 80%;
+    height: 100px;
+    overflow: auto;
+}
+
+.side-scroll-inner {
+    padding: 20px;
+}
+
+/* Begin Main Structure */
+
+.sidebar-one {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    height: 500px;
+    overflow: auto;
+}
+
+.main-content {
+    overflow: auto;
+    position: absolute;
+    left: 200px;
+    right: 200px;
+    height: 500px;
+    overflow: auto;
+}
+
+.sidebar-two {
+    background-color: #e3e3e3;
+    font-size: 90%;
+    width: 200px;
+    position: absolute;
+    right: 0;
+    height: 500px;
+    overflow: auto;
+}
+
+.sidebar-two-inner {
+    padding: 20px;
+}
+
+.main-content-inner {
+    padding: 20px;
+}
+
+.buttons {
+    width: 200px;
+    font-size: 75%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #454545;
+    position: absolute;
+    bottom: 0;
+}
+
+.buttons-inner {
+    padding: 10px;
+}
+
+.buttons a:link,
+.buttons a:visited {
+    display: inline-block;
+    background-color: #305782;
+    margin: 0 5px;
+    color: #FFF;
+    padding: 3px 11px;
+    border: 1px solid #333;
+    text-shadow: 1px 1px 0px #333;
+    text-decoration: none;
+}
+
+.buttons a:hover {
+    background-color: #436b96;
+}

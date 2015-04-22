@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - mydb@localhost" uuid="bf610da6-e82d-47c6-9c48-8625608e5a3f">
+    <database-info product="MySQL" version="5.6.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="mydb"/>
+    <table name="accounts" schema="" catalog="mydb" type="TABLE">
+      <column name="idAccounts" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Username" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Password" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="salt" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Reset" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Users_idUsers" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Role_idRole" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Biografie_idBiografie" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idAccounts"/>
+      <foreign-key name="fk_Accounts_Role1" columns="Role_idRole" ref-table="role" ref-schema="" ref-catalog="mydb" ref-columns="idRole" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_Accounts_Users" columns="Users_idUsers" ref-table="users" ref-schema="" ref-catalog="mydb" ref-columns="idUsers" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_Accounts_Biografie1" columns="Biografie_idBiografie" ref-table="biografie" ref-schema="" ref-catalog="mydb" ref-columns="idBiografie" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_Blog_Accounts1" table="blog" schema="" catalog="mydb" columns="Accounts_idAccounts"/>
+      <exported-key name="fk_Comments_Accounts1" table="comments" schema="" catalog="mydb" columns="Accounts_idAccounts"/>
+      <exported-key name="fk_Products_Accounts1" table="products" schema="" catalog="mydb" columns="Accounts_idAccounts"/>
+      <index name="fk_Accounts_Biografie1_idx" unique="false" columns="Biografie_idBiografie"/>
+      <index name="fk_Accounts_Role1_idx" unique="false" columns="Role_idRole"/>
+      <index name="fk_Accounts_Users_idx" unique="false" columns="Users_idUsers"/>
+    </table>
+    <table name="biografie" schema="" catalog="mydb" type="TABLE">
+      <column name="idBiografie" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Text" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idBiografie"/>
+      <exported-key name="fk_Accounts_Biografie1" table="accounts" schema="" catalog="mydb" columns="Biografie_idBiografie"/>
+    </table>
+    <table name="blog" schema="" catalog="mydb" type="TABLE">
+      <column name="idBlog" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Title" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="Accounts_idAccounts" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idBlog"/>
+      <foreign-key name="fk_Blog_Accounts1" columns="Accounts_idAccounts" ref-table="accounts" ref-schema="" ref-catalog="mydb" ref-columns="idAccounts" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_Comments_Blog1" table="comments" schema="" catalog="mydb" columns="Blog_idBlog"/>
+      <index name="fk_Blog_Accounts1_idx" unique="false" columns="Accounts_idAccounts"/>
+    </table>
+    <table name="comments" schema="" catalog="mydb" type="TABLE">
+      <column name="idComments" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Text" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="Blog_idBlog" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Accounts_idAccounts" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Products_idProducts" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idComments"/>
+      <foreign-key name="fk_Comments_Accounts1" columns="Accounts_idAccounts" ref-table="accounts" ref-schema="" ref-catalog="mydb" ref-columns="idAccounts" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_Comments_Blog1" columns="Blog_idBlog" ref-table="blog" ref-schema="" ref-catalog="mydb" ref-columns="idBlog" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_Comments_Products1" columns="Products_idProducts" ref-table="products" ref-schema="" ref-catalog="mydb" ref-columns="idProducts" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_Comments_Accounts1_idx" unique="false" columns="Accounts_idAccounts"/>
+      <index name="fk_Comments_Blog1_idx" unique="false" columns="Blog_idBlog"/>
+      <index name="fk_Comments_Products1_idx" unique="false" columns="Products_idProducts"/>
+    </table>
+    <table name="page" schema="" catalog="mydb" type="TABLE">
+      <column name="idpage" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="bestand" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idpage"/>
+    </table>
+    <table name="products" schema="" catalog="mydb" type="TABLE">
+      <column name="idProducts" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Title" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="Accounts_idAccounts" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idProducts"/>
+      <foreign-key name="fk_Products_Accounts1" columns="Accounts_idAccounts" ref-table="accounts" ref-schema="" ref-catalog="mydb" ref-columns="idAccounts" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_Comments_Products1" table="comments" schema="" catalog="mydb" columns="Products_idProducts"/>
+      <index name="fk_Products_Accounts1_idx" unique="false" columns="Accounts_idAccounts"/>
+    </table>
+    <table name="role" schema="" catalog="mydb" type="TABLE">
+      <column name="idRole" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idRole"/>
+      <exported-key name="fk_Accounts_Role1" table="accounts" schema="" catalog="mydb" columns="Role_idRole"/>
+    </table>
+    <table name="users" schema="" catalog="mydb" type="TABLE">
+      <column name="idUsers" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Surename" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Email" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idUsers"/>
+      <exported-key name="fk_Accounts_Users" table="accounts" schema="" catalog="mydb" columns="Users_idUsers"/>
+    </table>
+  </data-source>
+</component>

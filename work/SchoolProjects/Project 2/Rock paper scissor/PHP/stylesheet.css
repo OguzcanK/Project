@@ -1,0 +1,138 @@
+img {
+	border-radius: 400px;
+	width: 100px;
+	height: 100px;
+}
+
+#platform {
+	width: 600px;
+	height: 550px;
+	background-color: black;
+	border: 2px solid red;
+}
+
+#PHP {
+	position: absolute;
+	left: 250px;
+}
+
+#rules {	
+	position: absolute;
+	left: 610px;
+	top: 8px;
+	width: 600px;
+	height: 550px;
+	background-color: black;
+	border: 2px solid red;
+
+}
+
+.combinations {
+	display: block;
+	margin-top: 15px;
+	margin-left: 100px;
+	color: white;
+    -webkit-transition:.6s cubic-bezier(0,1.5,.5,1);
+	-moz-transition:.6s cubic-bezier(0,1.5,.5,1);
+	-o-transition:.6s cubic-bezier(0,1.5,.5,1);
+	transition:.6s cubic-bezier(0,1.5,.5,1)
+}
+
+li {
+	display: inline-block;
+	margin-top: 15px;
+    -webkit-transition:.6s cubic-bezier(0,1.5,.5,1);
+	-moz-transition:.6s cubic-bezier(0,1.5,.5,1);
+	-o-transition:.6s cubic-bezier(0,1.5,.5,1);
+	transition:.6s cubic-bezier(0,1.5,.5,1)
+}
+
+li:hover {
+	-webkit-transform:scale(1.5);
+	-moz-transform:scale(1.5);
+	-o-transform:scale(1.5);
+	-ms-transform:scale(1.5);
+	transform:scale(1.5)
+}
+
+input {
+	background-color:#ed8223;
+	color:#fff;
+	font-family:'Helvetica Neue',sans-serif;
+	font-size:18px;
+	line-height:30px;
+	border-radius:20px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border:0;
+	text-shadow:#C17C3A 0 -1px 0;
+	width:120px;
+	height:32px
+	cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+legend {
+	color: darkred;
+	font-family: serif;
+	font-size: 100px;
+}
+
+fieldset{
+	border-color: grey;
+}
+
+.uitslag	{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 350px;
+	top: 300px;
+	border-radius: 0;
+}
+
+.item	{
+	border-radius: 400px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 200px;
+	top: 300px;
+}
+
+.compitem	{
+	border-radius: 400px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 200px;
+	top: 400px;
+}
+.win	{
+	border-radius: 400px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 200px;
+	top: 550px;
+}
+.lose	{
+	border-radius: 400px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 330px;
+	top: 550px;
+}
+.tie	{
+	border-radius: 400px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 270px;
+	top: 550px;
+}

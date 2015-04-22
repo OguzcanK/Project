@@ -1,0 +1,459 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("Images/background.jpg");
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    overflow-x: hidden;
+}
+
+.content-container{
+	position: relative;
+	height: auto;
+	/*background-image: url('Images/paper-pattern.jpg');*/
+	background-image: url('Images/paper-pattern-2.jpg');
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.content-wrapper{
+	width: 700px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.mb30{
+	margin-bottom: 30px !important
+}
+
+.blok {
+	background-color: black;
+	margin-right: auto;
+	margin-left: auto;
+	width: 960px;
+	max-width: 100%;
+	height: auto;
+	position: relative;
+}
+
+
+.banner {
+	width: 960px;
+	max-width: 100%;
+	height: 200px;
+	background-image: url(Images/banner.jpg);
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.banner h1{
+	position: absolute;
+	top: 50px;
+	right: 100px;
+	text-shadow: 0px 0px 10px #000;
+	color: white;
+	z-index: 2;
+	font-size: 4em
+}
+
+.logo {
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1;
+	position: absolute;
+	left: 100px;
+	top: 25px;
+	width: 100px;
+	height: 100px;
+	border: solid black 1px;
+}
+
+/*Alles van menu zit hieronder*/
+.nav-bar{
+	background: black;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.current-menu-parent > a{
+	color: #555;
+}
+.current-menu-parent:hover{
+	background-color: black;
+}
+
+.current-menu-item, .current-menu-item:hover{
+	background: white;
+}
+.current-menu-item > a{
+	color: black
+}
+
+nav	{
+	display: inline-block;
+}
+
+ul {  
+	display: inline;
+	margin: 0;
+	padding: 15px 4px 17px 0;
+	color: white;
+	z-index: 1;
+}
+
+ul li {
+	font: bold 12px/18px sans-serif;
+	display: inline-block;
+	margin-right: -4px;
+	position: relative;
+	padding: 0;
+	background: black;
+	cursor: pointer;
+	z-index: 1;
+}
+
+	
+ul li:hover {
+	background: #555;
+	color: #fff;
+	z-index: 1;
+}
+
+ul li ul {
+	padding: 0;
+	position: absolute;
+	top: 48px;
+	left: 0;
+	width: 150px;
+	box-shadow: none;
+	display: none;
+	opacity: 0,5;
+	visibility: hidden;
+	z-index: 1;
+}
+
+ul li ul li { 
+	background: #555; 
+	display: block; 
+	color: #fff;
+	text-shadow: 0 -1px 0 #000;
+	z-index: 1;
+}
+
+ul li ul li:hover { 
+	background: #666; 
+	z-index: 1;
+}
+ul li:hover ul {
+  	display: block;
+ 	opacity: 1;
+	visibility: visible;
+	z-index: 1;
+}
+
+
+/*Alles van menu zit hierboven*/
+
+
+/*Alles van Searchbox zit hieronder*/
+
+
+input.s.field {
+		/*box-sizing: border-box;*/
+		position: absolute;
+		right: 0;
+        /*padding: 24px 18px;*/
+        line-height: 24px;
+        background: url("Images/search.png") 100% center no-repeat rgb(255, 255, 255);
+        float: right;
+        -webkit-transition-duration: 400ms;
+        transition-duration: 400ms;
+        -ms-transition-duration: 400ms;
+        -webkit-transition-property: width, background;
+        transition-property: width, background;
+        -ms-transition-property: width, background;
+        -webkit-transition-timing-function: ease;
+        transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        width: 15px;/*0px*/
+        height: 28px ;/*24px*/
+       /* color: rgb(187, 187, 187);*/
+        color: black;
+        font-style: italic;
+        margin: 0px;
+        /* border-color: transparent; */
+        border: none;
+        cursor: pointer;
+        text-indent: 25px;
+        outline: none
+    }
+    input.s.field:focus{
+        width: 150px;
+        padding-left: 10px;
+        /* border-color: rgb(234, 234, 234); */
+        text-indent: 0px;
+        z-index: 9999;
+    }
+
+
+/* Verander hier de teksen*/
+
+.tekst {
+	width: 700px;
+	height: auto;
+	/*min-height: 500px; NOT REALLY USEFUL*/
+	position: absolute;
+	left: 120px;
+	bottom: 100px;
+	/*color: #605e56;*/
+	color: #3e3d3d;
+	font-size: 20px;
+}
+
+.namen {
+	width: 700px;
+	height: 100px;
+	position: absolute;
+	left: 120px;
+	bottom: 600px;
+	color: #605e56;
+	font-family: Impact, fantasy;
+	font-size: 60px;
+}
+
+.namen, .tekst, footer{
+	position: static !important
+}
+
+.namen, .tekst{
+	max-width: 100%;
+}
+
+
+/*Gewoon voor vuller, een add*/
+.ads {
+	width: 700px;
+	padding: 0;
+	height: auto;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table	{
+	border-collapse: collapse;
+	border: 1px solid black;
+	height: 185px
+}
+
+th {
+  color: white;
+  border: 1px solid black;
+
+}
+
+tr 	{
+	border: 1px solid black;
+}
+
+td 	{
+	border:	1px solid black;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 15px 21px 15px 21px;
+}
+
+
+#blog {
+	width: 700px;
+	max-width: 100%;
+	height: auto;
+	min-height: 300px;
+	background-color: green;
+	color: white;
+	box-sizing: border-box;
+}
+
+
+.contact-question{
+	margin: 0 auto;
+	color: #605e56;
+	font-size: 20px;
+	width: 700px;
+	max-width: 100%;
+}
+
+.cv {
+	width: 700px;
+	height: auto;
+	position: static;
+	color: #605e56;
+	font-size: 20px;
+    vertical-align: top;
+    max-width: 100%;
+}
+
+.cv h1	{
+	font-size: 20px;
+}
+
+.vragen	{
+	width: 50%;
+	float: left;
+	height: 100%;
+}
+
+.resultaten	{
+	width: 50%;
+	float: right;
+	height: 100%;
+}
+
+.resultaten h1{
+	visibility: hidden;
+}
+
+#opdracht1	{
+	height: auto;
+	max-width: 100%;
+}
+
+#opracht2motor {
+	max-width: 100%;
+	height: auto;
+	max-height: 300px;
+}
+footer	{
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 1060px;
+	text-align: center;
+}
+
+table#skills{
+	width: auto;
+
+}
+
+table, td, th {
+    border: 1px solid black;
+    width: 700px;
+    max-width: 100% !important
+}
+
+.opdracht2 {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:29px;
+	-webkit-border-radius:29px;
+	border-radius:29px;
+	border:6px solid #84bbf3;
+	padding:18px 13px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #79bbff 32%, #378de5 73% );
+	background:-ms-linear-gradient( top, #79bbff 32%, #378de5 73% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(32%, #79bbff), color-stop(73%, #378de5) );
+	background-color:#79bbff;
+	color:#ffffff;
+	display:inline-block;
+	text-shadow:-25px 50px 39px #528ecc;
+ 	-webkit-box-shadow:inset 1px 1px 9px -35px #bbdaf7;
+ 	-moz-box-shadow:inset 1px 1px 9px -35px #bbdaf7;
+ 	box-shadow:inset 1px 1px 9px -35px #bbdaf7;
+}
+
+.opdracht2:hover {
+	background:-moz-linear-gradient( center top, #378de5 32%, #79bbff 73% );
+	background:-ms-linear-gradient( top, #378de5 32%, #79bbff 73% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(32%, #378de5), color-stop(73%, #79bbff) );
+	background-color:#378de5;
+}
+
+.opdracht2:active {
+	position:relative;
+	top:1px;
+}
+
+.opdracht {
+	text-decoration: none;
+	color: black;
+}
+
+#copy	{
+	font-size: 16px;
+	color: black;
+	text-align: center;
+	font-family: helvetica;
+}
+
+
+input, #text {
+	padding: 10px;
+	border: 1px solid #E5E5E5;
+	width: 200px;
+	color: #999999;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;		
+}
+
+#text {
+	width: 400px;
+	height: 150px;
+	max-width: 400px;
+	line-height: 18px;
+}
+
+input:hover, #text:hover,
+input:focus, #text:focus {
+	border: 1px solid #C9C9C9;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;	
+}
+
+.form label {
+	margin-left: 10px;
+	color: #999999;
+}
+
+/* ===========================
+   ====== Submit Button ====== 
+   =========================== */
+
+.submit input {
+	width: 100px; 
+	height: 40px;
+	background-color: #0F0117; 
+	color: #FFF;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;		
+	transition: all 0.5s ease-in-out 0s !important;
+	-o-transition: all 0.5s ease-in-out 0s !important;
+	-ms-transition: all 0.5s ease-in-out 0s !important;
+	-moz-transition: all 0.5s ease-in-out 0s !important;
+	-webkit-transition: all 0.5s ease-in-out 0s !important;
+}
+
+.submit input:hover {
+	color: #0F0117; 
+	border-color: #0F0117; 
+	background-color: #FFF;
+}
+
+/*
+img{
+	max-width: 100%;
+	height: auto !important
+}
+*/
