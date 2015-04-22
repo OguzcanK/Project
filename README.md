@@ -1,9 +1,9 @@
 # Project
 These are my current projects
 
-Stay up to date with for more projects
+Stay up to date for more projects
 
-Next up: Proffesional Portfolo Theme
+Next up: Proffesional Portfolio Theme
 
 Later: Fun javascript Games
 
